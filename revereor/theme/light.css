@@ -328,6 +328,11 @@ p.author {
 	margin-bottom: 16px;
 }
 
+p.post-notice {
+	padding: 8px;
+	border-radius: 8px;
+}
+
 .caret {
 	border-color: #fff5;
 }
@@ -397,6 +402,10 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 	.content ::marker {
 		color: var(--secondary);
 	}
+
+.postbody h3.first {
+	line-height: 110%;
+}
 
 .postbody table {
 	max-width: 100%;
