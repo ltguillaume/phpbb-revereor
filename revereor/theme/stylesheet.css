@@ -1,0 +1,12 @@
+/*  phpBB3 Style Sheet
+    --------------------------------------------------------------
+	Style name:			revereor
+	Based on style:	prosilver (the default phpBB 3.3.x style)
+	Original author:	Tom Beddard ( http://www.subblue.com/ )
+	Modified by:		ltGuillaume
+    --------------------------------------------------------------
+*/
+
+@import url("../../prosilver/theme/stylesheet.css");
+@import url("light.css");
+@import url("dark.css") screen and (prefers-color-scheme: dark);

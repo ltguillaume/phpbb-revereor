@@ -1,0 +1,88 @@
+:root {
+	--bg: #0d0d0e;
+	--border: #0d1217;
+	--button-text: var(--control-bg);
+	--control-bg: #11161c;
+	--control-bg-dark: #0e1217;
+	--control-bg-light: #141a21;
+	--control-bg-bright: #222c38;
+	--primary: #596db3;
+	--primary-dark: #455796;
+	--primary-hv: #455696;
+	--secondary: #c75317;
+	--secondary-hv: #de5c1a;
+	--shadow: rgba(0,0,0,0.059);
+	--text: #b0b0b0;
+	--text-bright: #c7c7c7;
+	--text-dim: #606c96;
+	--text-header: #1a1a1a;
+}
+
+* {
+	color-scheme: dark;
+	accent-color: var(--primary-dark);
+}
+
+.site_logo {
+	filter: invert(.9);
+}
+
+.search-header .inputbox {
+	border-bottom-color: var(--control-bg-bright);
+}
+	.search-header .inputbox:hover, .search-header .inputbox:focus {
+		border-bottom-color: var(--button-text);
+	}
+			.search-header ::placeholder {
+				color: #000a;
+			}
+				.search-header:hover ::placeholder, .search-header:focus ::placeholder {
+					color: var(--button-text);
+				}
+
+.forabg, .forumbg {
+	background: var(--primary-dark);
+}
+
+.topiclist dl.row-item {
+	background-blend-mode: hard-light;
+}
+
+.online {
+	background-blend-mode: difference;
+}
+
+dl.details dt, label, dd label,
+.panel, .content, .inputbox, .postbody, .message-box textarea, .fieldset.polls.dl, .postprofile strong, select, fieldset dl dt label, fieldset dl:hover dt label,
+.panel-container .panel li.header dd, .panel-container .panel li.header dt, .pagination li.ellipsis span {
+	color: var(--text);
+}
+.post:target .content {
+	color: var(--text-bright);
+}
+
+.dropdown li, .dropdown li li, .dropdown li.separator, .dropdown-extended .header, .dropdown-extended .footer, .caret, .codebox p, .notice, .signature, fieldset.polls dl {
+	border-color: var(--control-bg-bright);
+}
+.dropdown .dropdown-contents, .dropdown-extended .header {
+	background: var(--control-bg-dark);
+}
+	.dropdown .dropdown-contents li.bg2, .dropdown .dropdown-contents li.bg2:hover {
+		background: var(--control-bg-light);
+	}
+		.dropdown-extended a.mark_read {
+			background-color: var(--control-bg-bright);
+		}
+
+.dropdown-extended .header, .dropdown-extended .footer {
+	color: var(--primary);
+	text-shadow: none;
+}
+
+.username-coloured {
+	filter: invert(.1);
+}
+
+table.zebra-list tr:nth-child(2n+1) td, ul.zebra-list li:nth-child(2n+1) {
+	background-color: var(--control-bg);
+}
