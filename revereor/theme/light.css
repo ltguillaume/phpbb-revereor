@@ -200,7 +200,7 @@ li.header dt, li.header dd, table.table1 thead th {
 	background: var(--primary);
 }
 
-a, h1, h2, h3, .postlink {
+a, h1, h2, h3, .postlink, .post h3 a.first-unread, .post:target h3 a {
 	color: var(--primary);
 }
 	.navigation a, dl.details dd {
