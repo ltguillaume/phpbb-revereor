@@ -403,7 +403,7 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 		color: var(--secondary);
 	}
 
-.postbody h3.first {
+.postbody h3.first, .arrow-left, .arrow-right {
 	line-height: 110%;
 }
 
@@ -572,6 +572,9 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 		.postprofile .username, .postprofile .username-coloured {
 			font-size: 1em;
 		}
+	.postbody h3:first-child {
+		display: none;
+	}
 	.postbody .author {
 		float: right;
 		margin: -20px 0 0 0;
@@ -600,6 +603,9 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 		height: 22px;
 		font-size: 21px;
 		vertical-align: middle;
+	}
+	.arrow-left, .arrow-right {
+		line-height: 21px;
 	}
 	.button .icon.fa-sort-down {
 		margin-top: -10px;
