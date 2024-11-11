@@ -1,3 +1,5 @@
+<img src="SCREENSHOT.png" align="right">
+
 # Revereor phpBB Theme
 by ltGuillaume: [Codeberg](https://codeberg.org/ltguillaume) | [GitHub](https://github.com/ltguillaume) | [Buy me a beer](https://buymeacoff.ee/ltguillaume) 🍺
 
