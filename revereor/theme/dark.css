@@ -23,7 +23,7 @@
 	accent-color: var(--primary-dark);
 }
 
-.site_logo {
+.site_logo, .site-description img {
 	filter: invert(.9);
 }
 

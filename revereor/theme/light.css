@@ -391,6 +391,10 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 		max-height: 25px;
 	}
 
+.online {
+	background-image: url("./images/icon_user_online.gif");
+}
+
 .content h2, .panel h2 {
 	color: var(--primary);
 	border: none;
@@ -544,10 +548,6 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 	}
 		.logo {
 			display: block;
-		}
-		#boar {
-			float: unset;
-			margin-top: -20px;
 		}
 	.rightside.responsive-search i {
 		vertical-align: top;
