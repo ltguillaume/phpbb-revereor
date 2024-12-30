@@ -86,7 +86,7 @@ html, body {
 			border-top-style: dotted;
 		}
 	blockquote, blockquote blockquote blockquote, .attachbox, .codebox {
-		margin: 8px 1px;
+		margin: 16px 1px;
 		background: var(--control-bg-dark);
 		border-color: var(--control-bg-dark);
 	}
@@ -147,7 +147,8 @@ html, body {
 	}
 
 .breadcrumbs .crumb::before {
-	content: '\2027';
+	content: '/';
+	font-weight: 300;
 }
 	.breadcrumbs span:first-of-type a {
 		margin-right: -.25em;
@@ -441,6 +442,10 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 .postbody .author, .postbody .responsive-hide, .signature,
 .icon.icon-lightgray, a:hover .icon.icon-lightgray {
 	color: var(--text-dim);
+}
+
+.postbody .inline-attachment {
+	margin: 16px 0;
 }
 
 #qr_postform h2 {
