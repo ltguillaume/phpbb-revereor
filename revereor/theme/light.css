@@ -140,6 +140,7 @@ html, body {
 	}
 
 .navbar {
+	padding-left: 6px;
 	background: none;
 }
 	ul.navlinks, .attachbox dd {
@@ -458,6 +459,14 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 	width: 100%;
 }
 
+.topicreview {
+	padding-left: 1px;
+	margin-left: -1px;
+}
+	.topicreview .postbody .author {
+		float: none;
+	}
+
 .forums, .pagination li a, .pagination li span {
 	border-radius: 4px;
 }
@@ -624,6 +633,9 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 @media (max-width: 500px) {
 	.action-bar .pagination {
 		padding-right: 0;
+	}
+	.action-bar > :not(form), .action-bar > form > * {
+		margin-bottom: 5px;
 	}
 }
 
