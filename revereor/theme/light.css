@@ -377,15 +377,18 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 		margin: 0;
 	}
 	.postprofile .username, .postprofile .username-coloured {
-		font-size: 1.1em;
+		font-size: 1.2em;
 	}
 
-.postprofile .avatar img, .postbody img.postimage, .postbody video {
+img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	max-width: 100%;
 	max-height: 100vh;
 	border: 1px solid var(--control-bg-dark);
 	border-radius: 4px;
 }
+	.postprofile .avatar img {
+		border: none;
+	}
 	.postbody img[src*="/images/uploads/"], .postbody video {
 		margin: 8px 0;
 	}
@@ -447,6 +450,7 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 
 .postbody .inline-attachment {
 	margin: 16px 0;
+	font-size: .85em;
 }
 
 #qr_postform h2 {
@@ -476,10 +480,6 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 	.row:last-child {
 		border-radius: 0 0 4px 4px;
 	}
-
-.action-bar .pagination {
-	padding-right: 4px;
-}
 
 .pagination li a, .pagination li span, .pagination li.active span {
 	background: var(--control-bg-light);
@@ -540,6 +540,13 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 		.panel {
 			margin-top: 0;
 		}
+	.page-body h2, .action-bar.bar-top {
+		margin-left: 2px;
+	}
+	.action-bar.bar-bottom > * {
+		float: right;
+		margin-right: 0;
+	}
 	.action-bar.compact {
 		margin-bottom: 8px;
 	}
@@ -567,24 +574,35 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 		vertical-align: top;
 	}
 	input.tiny {
-		width: 61px !important;
+		width: 6em !important;
 	}
+		input.tiny::placeholder {
+			color: transparent;
+		}
 	.post .postprofile, .postprofile .avatar {
 		margin: 0 auto;
 	}
+	.postprofile .avatar-container {
+		max-width: 88px;
+	}
 	.postprofile .avatar img {
-		max-height: 48px;
-		margin-bottom: 2px;
+		max-width: 80px;
+		max-height: 56px;
+		margin-right: 8px;
+	}
+	.postprofile dt.has-profile-rank {
+		height: 56px;
 	}
 	.postprofile dt, .postprofile dd.profile-rank, .search .postprofile dd {
-		display: inline-block;
+		display: table-cell;
 		vertical-align: top;
 	}
-		.postprofile dt {
-			text-align: center;
-		}
 		.postprofile .username, .postprofile .username-coloured {
-			font-size: 1em;
+			position: absolute;
+		}
+		.postprofile dd.profile-rank {
+			vertical-align: bottom;
+			padding-bottom: 1px;
 		}
 	.postbody h3:first-child {
 		display: none;
@@ -607,11 +625,15 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 	.scrolltop {
 		margin: -4px 0 4px 0;
 	}
-	.pagination {
+	.action-bar > .pagination {
+		float: right;
 		padding-top: 8px;
 	}
-		.pagination > ul {
+		.action-bar > .pagination > ul {
 			margin: 0;
+		}
+		.action-bar > .pagination .arrow.next {
+			margin-right: -6px;
 		}
 	.icon:not(.fa-file), .button .icon, blockquote cite::before, .uncited::before {
 		height: 22px;
@@ -631,9 +653,6 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 }
 
 @media (max-width: 500px) {
-	.action-bar .pagination {
-		padding-right: 0;
-	}
 	.action-bar > :not(form), .action-bar > form > * {
 		margin-bottom: 5px;
 	}

@@ -8,5 +8,5 @@
 */
 
 @import url("../../prosilver/theme/stylesheet.css");
-@import url("light.css");
-@import url("dark.css") screen and (prefers-color-scheme: dark);
+@import url("./light.css");
+@import url("./dark.css") screen and (prefers-color-scheme: dark);
