@@ -40,6 +40,10 @@
 					color: var(--button-text);
 				}
 
+#page-body .inputbox:not(.search) {
+	background: var(--control-bg-dark);
+}
+
 .forabg, .forumbg {
 	background: var(--primary-dark);
 }
