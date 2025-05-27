@@ -345,6 +345,12 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 	background-image: none;
 	border-color: var(--border);
 }
+	.dropdown-extended .header {
+		border-bottom-style: dotted;
+	}
+	.dropdown-extended .footer {
+		border-top-style: dotted;
+	}
 
 .tabs .tab > a {
 	background: var(--secondary);
