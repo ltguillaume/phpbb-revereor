@@ -82,7 +82,7 @@ html, body {
 	.panel-container .panel, .contact-icons a:hover {
 		background: var(--control-bg-dark);
 	}
-		#quick-links .separator {
+		#quick-links .separator, .dropdown li.separator {
 			border-top-style: dotted;
 		}
 	blockquote, blockquote blockquote blockquote, .attachbox, .codebox {
@@ -337,6 +337,10 @@ p.post-notice {
 
 .caret {
 	border-color: #fff5;
+}
+
+.icon.icon-md {
+	font-size: 11px;
 }
 
 h3, table.table1 tbody tr, table.table1 tbody td,
