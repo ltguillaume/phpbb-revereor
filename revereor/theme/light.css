@@ -123,9 +123,8 @@ html, body {
 					.search-header:hover ::placeholder, .search-header:focus ::placeholder {
 						color: #fff;
 					}
-	.search-header .button {
-		margin-top: -2px;
-		padding-bottom: 5px;
+	.search-header .button-search, .search-header .button-search-end {
+		padding: 1px 3px 4px;
 	}
 
 .logo {
@@ -192,6 +191,11 @@ li.header dt, li.header dd, table.table1 thead th {
 	}
 	.action-bar.compact {
 		clear: both;
+	}
+	.action-bar .button,
+	.action-bar .search-box .inputbox {
+		box-sizing: border-box;
+		height: 26px;
 	}
 	.action-bar .inputbox {
 		background: var(--control-bg-light);
@@ -308,6 +312,9 @@ a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, inpu
 	color: var(--button-text);
 	border-color: var(--secondary);
 }
+	.button {
+		font-size: 14px;
+	}
 	.button:hover, .button:hover .icon,
 	.button:focus, .button:focus .icon {
 		background: var(--secondary-hv);
@@ -572,6 +579,10 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	.action-bar.compact {
 		margin-bottom: 8px;
 	}
+	.action-bar .button,
+	.action-bar .search-box .inputbox {
+		height: 28px;
+	}
 	fieldset.quick-login input.inputbox {
 		width: 100%;
 		max-width: unset;
@@ -664,7 +675,7 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 			margin-right: -6px;
 		}
 	.icon:not(.fa-file), .button .icon, blockquote cite::before, .uncited::before {
-		height: 22px;
+		padding-bottom: 1px;
 		font-size: 21px;
 		vertical-align: middle;
 	}
@@ -676,7 +687,7 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 		background: none;
 	}
 	.search-box .inputbox {
-		height: 27.5px;
+		height: 27px;
 	}
 }
 
