@@ -163,6 +163,10 @@ li.header dt, li.header dd, table.table1 thead th {
 	font-weight: 600 !important;
 	text-transform: none;
 }
+	li.header dt {
+		font-size: 1.1em;
+		line-height: 1em;
+	}
 	li.header dl.row-item dt .list-inner {
 		padding-left: 2px;
 	}
@@ -268,6 +272,14 @@ select, .cplist {
 	box-shadow: 0 0 0 1px var(--shadow) !important;
 }
 
+hr {
+	display: none;
+}
+	.postbody hr {
+		display: block;
+		border-color: var(--border);
+	}
+
 li.row {
 	border-top-color: transparent !important;
 	border-bottom-color: var(--border) !important;
@@ -275,6 +287,9 @@ li.row {
 	li.row:hover, table.table1 tbody tr:hover, table.table1 tbody tr.hover,
 	table.zebra-list tr:nth-child(2n) td, ul.zebra-list li:nth-child(2n) {
 		background: var(--control-bg-light);
+	}
+	table.zebra-list tr:nth-child(2n+1) td, ul.zebra-list li:nth-child(2n+1) {
+		background: var(--control-bg);
 	}
 	li.row strong {
 		color: unset;
@@ -466,9 +481,6 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 #qr_postform h2 {
 	margin: 0;
 }
-#qr_postform dl {
-	display: none;
-}
 #qr_postform .message-box {
 	width: 100%;
 }
@@ -565,6 +577,9 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 		max-width: unset;
 		margin-left: 0;
 	}
+	li.header dt {
+		font-size: 1.25em;
+	}
 	ul.topiclist li.row {
 		padding: 0;
 	}
@@ -620,6 +635,9 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	.postbody .author {
 		float: right;
 		margin: -20px 0 0 0;
+	}
+	.postbody table td {
+		padding: 8px 12px;
 	}
 	.has-profile .post-buttons {
 		right: 15px;
