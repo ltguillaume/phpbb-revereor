@@ -100,6 +100,9 @@ html, body {
 		font-weight: 600;
 		background-color: var(--control-bg-dark);
 	}
+	.notification_list p.notification-time {
+		color: var(--text-dim);
+	}
 
 .headerbar {
 	background: var(--secondary);
@@ -197,6 +200,16 @@ li.header dt, li.header dd, table.table1 thead th {
 		box-sizing: border-box;
 		height: 26px;
 	}
+		.action-bar > *, .action-bar .button {
+			margin-right: 0 !important;
+			margin-left: 5px !important;
+		}
+		.action-bar > :first-child,
+		.action-bar > .dropdown-container > :first-child,
+		.action-bar .button-search,
+		.action-bar .button-search-end {
+			margin-left: 0 !important;
+		}
 	.action-bar .inputbox {
 		background: var(--control-bg-light);
 		border-color: var(--secondary) !important;
@@ -204,6 +217,12 @@ li.header dt, li.header dd, table.table1 thead th {
 		.action-bar .inputbox:hover, .action-bar .inputbox:focus {
 			background: var(--control-bg-bright);
 		}
+		.action-bar .inputbox::placeholder {
+			color: var(--text-dim);
+		}
+	.action-bar .fa-fw {
+		width: 1.1em;
+	}
 
 .forabg, .forumbg {
 	margin: 16px 0;
@@ -572,10 +591,6 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	.page-body h2, .action-bar.bar-top {
 		margin-left: 2px;
 	}
-	.action-bar.bar-bottom > * {
-		float: right;
-		margin-right: 0;
-	}
 	.action-bar.compact {
 		margin-bottom: 8px;
 	}
@@ -609,12 +624,18 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	.rightside.responsive-search i {
 		vertical-align: top;
 	}
-	input.tiny {
-		width: 6em !important;
+	.action-bar {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: flex-end;
 	}
-		input.tiny::placeholder {
-			color: transparent;
-		}
+	.action-bar .search-box,
+	.action-bar .search-box form,
+	.action-bar .search-box fieldset,
+	.action-bar .search-box input {
+		display: flex;
+		flex-grow: 1;
+	}
 	.post .postprofile, .postprofile .avatar {
 		margin: 0 auto;
 	}
@@ -665,7 +686,6 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 		margin: -4px 0 4px 0;
 	}
 	.action-bar > .pagination {
-		float: right;
 		padding-top: 8px;
 	}
 		.action-bar > .pagination > ul {
@@ -688,6 +708,10 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	}
 	.search-box .inputbox {
 		height: 27px;
+	}
+	#page-body .inputbox:not(.search) {
+		margin-top: 4px;
+		margin-left: 1px;
 	}
 }
 
