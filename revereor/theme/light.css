@@ -200,7 +200,7 @@ li.header dt, li.header dd, table.table1 thead th {
 		box-sizing: border-box;
 		height: 26px;
 	}
-		.action-bar > *, .action-bar .button {
+		.action-bar .button, .action-bar > .dropdown-container, .action-bar > .search-box {
 			margin-right: 0 !important;
 			margin-left: 5px !important;
 		}
@@ -222,6 +222,9 @@ li.header dt, li.header dd, table.table1 thead th {
 		}
 	.action-bar .fa-fw {
 		width: 1.1em;
+	}
+	.action-bar > .pagination {
+		margin-left: 5px;
 	}
 
 .forabg, .forumbg {
@@ -516,7 +519,7 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	margin-left: -1px;
 }
 	.topicreview .postbody .author {
-		float: none;
+		clear: none;
 	}
 
 .forums, .pagination li a, .pagination li span {
@@ -664,10 +667,6 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	.postbody h3:first-child {
 		display: none;
 	}
-	.postbody .author {
-		float: right;
-		margin: -20px 0 0 0;
-	}
 	.postbody table td {
 		padding: 8px 12px;
 	}
@@ -686,7 +685,9 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 		margin: -4px 0 4px 0;
 	}
 	.action-bar > .pagination {
-		padding-top: 8px;
+		width: 100%;
+		margin: 8px 0 0 0;
+		text-align: end;
 	}
 		.action-bar > .pagination > ul {
 			margin: 0;
@@ -718,6 +719,9 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 @media (max-width: 500px) {
 	.action-bar > :not(form), .action-bar > form > * {
 		margin-bottom: 5px;
+	}
+	.action-bar > .pagination {
+		margin-top: 3px;
 	}
 }
 
