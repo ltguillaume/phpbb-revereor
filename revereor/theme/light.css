@@ -85,6 +85,9 @@ html, body {
 		#quick-links .separator, .dropdown li.separator {
 			border-top-style: dotted;
 		}
+	blockquote:first-child {
+		margin-top: 0;
+	}
 	blockquote, blockquote blockquote blockquote, .attachbox, .codebox {
 		margin: 16px 1px;
 		background: var(--control-bg-dark);
@@ -148,6 +151,9 @@ html, body {
 	ul.navlinks, .attachbox dd {
 		border-top: none;
 	}
+	ul.linklist li.responsive-menu {
+		margin-right: 7px;
+	}
 
 .breadcrumbs .crumb::before {
 	content: '/';
@@ -186,9 +192,13 @@ li.header dt, li.header dd, table.table1 thead th {
 	margin: -8px 8px 8px 8px;
 }
 
-.action-bar {
-	font-size: unset;
+.action-bar, .page-body h2 {
+	margin-left: 2px;
+	margin-right: 2px;
 }
+	.action-bar {
+		font-size: unset;
+	}
 	.action-bar.compact, .stat-block, .headerspace {
 		margin: -8px 8px;
 	}
@@ -206,6 +216,7 @@ li.header dt, li.header dd, table.table1 thead th {
 		}
 		.action-bar > :first-child,
 		.action-bar > .dropdown-container > :first-child,
+		.action-bar > .pagination .button,
 		.action-bar .button-search,
 		.action-bar .button-search-end {
 			margin-left: 0 !important;
@@ -223,9 +234,15 @@ li.header dt, li.header dd, table.table1 thead th {
 	.action-bar .fa-fw {
 		width: 1.1em;
 	}
-	.action-bar > .pagination {
-		margin-left: 5px;
+	.action-bar > .pagination, .action-bar.bar-bottom .pagination {
+		margin: 4px 0 4px 4px;
 	}
+		.action-bar > .pagination > ul {
+			margin: -4px 0 0 4px;
+		}
+		.pagination .arrow .icon {
+			line-height: 21px;
+		}
 
 .forabg, .forumbg {
 	margin: 16px 0;
@@ -507,11 +524,20 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	font-size: .85em;
 }
 
+.signature {
+	margin-top: 16px;
+}
+
 #qr_postform h2 {
 	margin: 0;
 }
 #qr_postform .message-box {
 	width: 100%;
+}
+
+.ucp-main .postbody .author {
+	float: none;
+	margin: 0;
 }
 
 .topicreview {
@@ -571,7 +597,7 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 }
 
 .page-footer {
-	padding: 0 8px 0 8px;
+	padding: 0 6px;
 }
 	.page-footer .navbar, .page-footer ul.linklist {
 		padding: 0;
@@ -591,9 +617,6 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 		.panel {
 			margin-top: 0;
 		}
-	.page-body h2, .action-bar.bar-top {
-		margin-left: 2px;
-	}
 	.action-bar.compact {
 		margin-bottom: 8px;
 	}
@@ -625,6 +648,7 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 			display: block;
 		}
 	.rightside.responsive-search i {
+		margin-right: -4px;
 		vertical-align: top;
 	}
 	.action-bar {
@@ -667,6 +691,10 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	.postbody h3:first-child {
 		display: none;
 	}
+	.postbody .author {
+		float: right;
+		margin: -20px 0 0 0;
+	}
 	.postbody table td {
 		padding: 8px 12px;
 	}
@@ -682,18 +710,18 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 		max-height: 64px !important;
 	}
 	.scrolltop {
-		margin: -4px 0 4px 0;
+		margin: -3px 0 4px 0;
 	}
-	.action-bar > .pagination {
+	.action-bar > .pagination, .action-bar.bar-bottom .pagination {
 		width: 100%;
-		margin: 8px 0 0 0;
 		text-align: end;
 	}
 		.action-bar > .pagination > ul {
-			margin: 0;
+			margin: 4px 0 0 0;
 		}
-		.action-bar > .pagination .arrow.next {
-			margin-right: -6px;
+		.action-bar > .pagination i {
+			margin-bottom: -2px;
+			padding-bottom: 0;
 		}
 	.icon:not(.fa-file), .button .icon, blockquote cite::before, .uncited::before {
 		padding-bottom: 1px;
