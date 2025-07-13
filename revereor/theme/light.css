@@ -5,7 +5,7 @@
 	--control-bg: #fcf6f2;
 	--control-bg-dark: #f7f1ed;
 	--control-bg-light: #fff9f5;
-	--control-bg-bright: #fffbf8;
+	--control-bg-bright: #fffcf9;
 	--green: #439c53;
 	--link-text: var(--button-text);
 	--primary: #455696;
@@ -30,13 +30,18 @@
 	scrollbar-width: thin;
 }
 
-body {
-	font-size: .7em;
-}
-
 html, body {
 	background: var(--bg);
 	color: var(--primary);
+}
+
+html {
+	overflow-y: auto;
+	scroll-padding-top: 16px;
+}
+
+body {
+	font-size: .7em;
 }
 
 .wrap, .panel, .post, .codebox, .cp-main .pm, .dropdown .dropdown-contents, blockquote, .postbody table, .attachbox {
@@ -210,17 +215,12 @@ li.header dt, li.header dd, table.table1 thead th {
 		box-sizing: border-box;
 		height: 26px;
 	}
-		.action-bar .button, .action-bar > .dropdown-container, .action-bar > .search-box {
-			margin-right: 0 !important;
-			margin-left: 5px !important;
-		}
-		.action-bar > :first-child,
-		.action-bar > .dropdown-container > :first-child,
-		.action-bar > .pagination .button,
-		.action-bar .button-search,
-		.action-bar .button-search-end {
-			margin-left: 0 !important;
-		}
+	.action-bar > .button:not(:first-child), .action-bar > .dropdown-container, .action-bar > form > .dropdown-container, .action-bar > .search-box {
+		margin-left: 5px;
+	}
+	.action-bar .button, .action-bar > .dropdown-container, .action-bar > form > .dropdown-container, .action-bar > .search-box {
+		margin-right: 0 !important;
+	}
 	.action-bar .inputbox {
 		background: var(--control-bg-light);
 		border-color: var(--secondary) !important;
@@ -234,7 +234,7 @@ li.header dt, li.header dd, table.table1 thead th {
 	.action-bar .fa-fw {
 		width: 1.1em;
 	}
-	.action-bar > .pagination, .action-bar.bar-bottom .pagination {
+	.action-bar > .pagination, .action-bar.bar-bottom > .pagination {
 		margin: 4px 0 4px 4px;
 	}
 		.action-bar > .pagination > ul {
@@ -344,22 +344,29 @@ li.row {
 		color: var(--text-dim) !important;
 	}
 
-.button, .button .icon,
+.button,
 a.button1, input.button1, input.button3, a.button2, input.button2,
 a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover {
 	background: var(--secondary);
 	color: var(--button-text);
 	border-color: var(--secondary);
 }
-	.button {
-		font-size: 14px;
+
+.button {
+	font-size: 14px;
+}
+	.button .icon {
+		color: var(--button-text);
+		border-color: var(--secondary);
 	}
 	.button:hover, .button:hover .icon,
 	.button:focus, .button:focus .icon {
-		background: var(--secondary-hv);
 		color: var(--button-text);
 		border-color: var(--secondary-hv);
 	}
+		.button:hover, .button:focus {
+			background: var(--secondary-hv);
+		}
 	.button.button-icon-only, .button.button-icon-only .icon {
 		background: none !important;
 		color: var(--primary);
@@ -377,7 +384,7 @@ a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, inpu
 			line-height: unset;
 		}
 	input.button1, input.button2, input.button3 {
-		padding: 2px 8px 4px 8px;
+		padding: 3px 8px 4px 8px;
 		border-radius: 4px;
 	}
 		input.button1:hover, input.button2:hover, input.button3:hover,
@@ -535,17 +542,18 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	width: 100%;
 }
 
-.ucp-main .postbody .author {
-	float: none;
-	margin: 0;
-}
-
 .topicreview {
 	padding-left: 1px;
 	margin-left: -1px;
 }
-	.topicreview .postbody .author {
-		clear: none;
+
+.topicreview .postbody .author, .mcp-main .postbody .author, .ucp-main .postbody .author {
+	float: left;
+	margin: 0;
+	clear: none;
+}
+	.has-profile .postbody .author {
+		clear: both;
 	}
 
 .forums, .pagination li a, .pagination li span {
@@ -575,14 +583,13 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 		background: var(--control-bg-dark);
 	}
 
-#page-body .inputbox:not(.search) {
+#page-body .inputbox:not(.search), #page-body input[type=radio], #page-body select {
 	background: var(--control-bg-bright);
 	border-radius: 4px;
 	border-color: transparent !important;
-	box-shadow: 0 0 0 1px var(--shadow) !important;
 }
-	#page-body .quick-login .inputbox {
-		background: var(--control-bg-light);
+	#page-body .inputbox:not(.search) {
+		box-shadow: 0 0 0 1px var(--shadow) !important;
 	}
 
 #smiley-box img {
@@ -605,6 +612,9 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 
 /* Responsive design */
 @media (max-width: 700px) {
+	html {
+		scroll-padding-top: 8px;
+	}
 	.wrap {
 		margin: 8px;
 		padding: 8px;
@@ -733,14 +743,12 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	}
 	.button .icon.fa-sort-down {
 		margin-top: -10px;
-		background: none;
 	}
 	.search-box .inputbox {
-		height: 27px;
+		height: 28px;
 	}
-	#page-body .inputbox:not(.search) {
-		margin-top: 4px;
-		margin-left: 1px;
+	#page-body .inputbox:not(.search), #page-body input[type=radio], #page-body select {
+		margin: 4px 4px 4px 1px;
 	}
 }
 
