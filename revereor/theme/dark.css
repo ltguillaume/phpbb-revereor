@@ -6,6 +6,7 @@
 	--control-bg-dark: #0e1217;
 	--control-bg-light: #141921;
 	--control-bg-bright: #222c38;
+	--input-bg: #0e1217;
 	--primary: #596db3;
 	--primary-dark: #455796;
 	--primary-hv: #455696;
@@ -39,10 +40,6 @@
 				.search-header:hover ::placeholder, .search-header:focus ::placeholder {
 					color: var(--button-text);
 				}
-
-#page-body .inputbox:not(.search) {
-	background: var(--control-bg-dark);
-}
 
 .forabg, .forumbg {
 	background: var(--primary-dark);

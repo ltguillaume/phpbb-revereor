@@ -7,6 +7,7 @@
 	--control-bg-light: #fff9f5;
 	--control-bg-bright: #fffcf9;
 	--green: #439c53;
+	--input-bg: #fffcf9;
 	--link-text: var(--button-text);
 	--primary: #455696;
 	--primary-hv: #546ab8;
@@ -226,7 +227,7 @@ li.header dt, li.header dd, table.table1 thead th {
 		border-color: var(--secondary) !important;
 	}
 		.action-bar .inputbox:hover, .action-bar .inputbox:focus {
-			background: var(--control-bg-bright);
+			background: var(--input-bg);
 		}
 		.action-bar .inputbox::placeholder {
 			color: var(--text-dim);
@@ -583,11 +584,16 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 		background: var(--control-bg-dark);
 	}
 
-#page-body .inputbox:not(.search), #page-body input[type=radio], #page-body select {
-	background: var(--control-bg-bright);
+#page-body .inputbox:not(.search), #page-body input[type=radio], #page-body select, #page-body textarea {
+	background: var(--input-bg);
 	border-radius: 4px;
 	border-color: transparent !important;
 }
+	#page-body .dropdown select {
+		margin: 2px 0 2px 2px;
+		padding-left: 4px;
+		background: var(--control-bg-light);
+	}
 	#page-body .inputbox:not(.search) {
 		box-shadow: 0 0 0 1px var(--shadow) !important;
 	}
@@ -758,6 +764,10 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	}
 	.action-bar > .pagination {
 		margin-top: 3px;
+	}
+	a[href*="mode=smilies"] {
+		float: right;
+		margin: 0 4px 8px 4px;
 	}
 }
 
