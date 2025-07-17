@@ -59,7 +59,7 @@ body {
 		max-height: none;
 		padding: 0;
 	}
-		.dropdown .dropdown-contents a, .dropdown fieldset.display-options {
+		.dropdown .dropdown-contents a, .dropdown fieldset.display-options, .page-jump .dropdown-contents {
 			padding: 8px;
 		}
 		.dropdown-extended ul {
@@ -74,6 +74,9 @@ body {
 				background-color: var(--control-bg-light);
 				border-radius: 4px 0 0 4px;
 				box-shadow: 0 0 0 1px var(--shadow) !important;
+			}
+			.page-jump .dropdown-contents li {
+				padding: 0;
 			}
 	.dropdown .dropdown-contents, .dropdown-extended .header {
 		background-color: var(--control-bg-bright);
