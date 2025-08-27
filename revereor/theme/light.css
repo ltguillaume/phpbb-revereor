@@ -759,6 +759,9 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	#page-body .inputbox:not(.search), #page-body input[type=radio], #page-body select {
 		margin: 4px 4px 4px 1px;
 	}
+		 #page-body #qr_postform .inputbox {
+			margin: 0;
+		}
 }
 
 @media (max-width: 500px) {
