@@ -53,11 +53,14 @@
 	background-blend-mode: difference;
 }
 
-dl.details dt, label, dd label,
+dl.details dt, label, dd label, fieldset.polls dl.voted,
 .panel, .content, .inputbox, .postbody, .message-box textarea, .fieldset.polls.dl, .postprofile strong, select, fieldset dl dt label, fieldset dl:hover dt label,
 .panel-container .panel li.header dd, .panel-container .panel li.header dt, .pagination li.ellipsis span {
 	color: var(--text);
 }
+	fieldset.polls dl {
+		color: var(--text-dim);
+	}
 .post:target .content {
 	color: var(--text-bright);
 }

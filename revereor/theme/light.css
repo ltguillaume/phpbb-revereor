@@ -30,6 +30,9 @@
 	box-shadow: none;
 	scrollbar-width: thin;
 }
+	.postbody pre, .codebox code {
+		font: 1em monospace !important;
+	}
 
 html, body {
 	background: var(--bg);
@@ -88,6 +91,9 @@ body {
 		margin: 16px 0;
 		padding: 16px;
 	}
+		fieldset.polls dd div {
+			padding: 0 2px 2px;
+		}
 	.panel-container .panel, .contact-icons a:hover {
 		background: var(--control-bg-dark);
 	}
@@ -132,12 +138,9 @@ body {
 				background: #fff1;
 				border-bottom: 1px solid #fff;
 			}
-				.search-header ::placeholder {
-					color: #fffa;
-				}
-					.search-header:hover ::placeholder, .search-header:focus ::placeholder {
-						color: #fff;
-					}
+			.search-header ::placeholder {
+				color: #fffa;
+			}
 	.search-header .button-search, .search-header .button-search-end {
 		padding: 1px 3px 4px;
 	}
