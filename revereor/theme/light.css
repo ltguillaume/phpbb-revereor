@@ -468,11 +468,11 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 	max-width: 100%;
 	max-height: 100vh;
-	border: 1px solid var(--control-bg-dark);
 	border-radius: 4px;
 }
-	.postprofile .avatar img {
-		border: none;
+	.postbody img.postimage, .postbody video {
+		max-width: calc(100% - 2px);
+		border: 1px solid var(--control-bg-dark);
 	}
 	.postbody img[src*="/images/uploads/"], .postbody video {
 		margin: 8px 0;
