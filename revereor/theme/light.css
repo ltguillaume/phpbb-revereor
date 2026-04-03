@@ -270,7 +270,7 @@ li.header dt, li.header dd {
 	background: var(--primary);
 }
 
-a, h1, h2, h3, .postlink, .post h3 a.first-unread, .post:target h3 a {
+a, h1, h2, h3, label, .postlink, .post h3 a.first-unread, .post:target h3 a {
 	color: var(--primary);
 }
 	.navigation a, dl.details dd {
@@ -606,6 +606,7 @@ ul.forums, ul.topics, .pagination li a, .pagination li span {
 	}
 
 #page-body .inputbox:not(.search), #page-body input[type=radio], #page-body select, #page-body textarea {
+	padding: 5px;
 	background: var(--input-bg);
 	border-radius: 4px;
 	border-color: transparent !important;
