@@ -13,7 +13,7 @@
 	--primary-hv: #546ab8;
 	--secondary: #de5c1a;
 	--secondary-hv: #c75317;
-	--shadow: rgba(0,0,0,0.059);
+	--shadow: rgba(0, 0, 0, .059);
 	--text-dim: #75716f;
 	--text-header: white;
 }
@@ -122,6 +122,10 @@ body {
 		color: var(--text-dim);
 	}
 
+.headerbar, .forabg, .forumbg, .topiclist.forums, .topiclist.topics {
+	box-shadow: 0 0 0 1px var(--shadow);
+}
+
 .headerbar {
 	background: var(--secondary);
 }
@@ -183,9 +187,16 @@ li.header dt, li.header dd, table.table1 thead th {
 	font-weight: 600 !important;
 	text-transform: none;
 }
+
+li.header dt, li.header dd {
+	color: var(--text);
+}
 	li.header dt {
 		font-size: 1.1em;
 		line-height: 1em;
+	}
+	li.header dd {
+		line-height: 1.1em;
 	}
 	li.header dl.row-item dt .list-inner {
 		padding-left: 2px;
@@ -250,6 +261,9 @@ li.header dt, li.header dd, table.table1 thead th {
 		.pagination .arrow .icon {
 			line-height: 21px;
 		}
+	.advanced-search-link {
+		margin: 3px 0 -3px 3px;
+	}
 
 .forabg, .forumbg {
 	margin: 16px 0;
@@ -296,10 +310,6 @@ a, h1, h2, h3, .postlink, .post h3 a.first-unread, .post:target h3 a {
 .forumbg .header a, .forabg .header a, th a,
 li.header dl.row-item dt, li.header dl.row-item dd {
 	color: var(--button-text) !important;
-}
-
-li.header dt, li.header dd {
-	color: var(--text);
 }
 
 .topiclist dl.row-item {
@@ -424,12 +434,17 @@ h3, table.table1 tbody tr, table.table1 tbody td,
 	background-image: none;
 	border-color: var(--border);
 }
-	.dropdown-extended .header {
-		border-bottom-style: dotted;
+	.dropdown-extended .header, .dropdown-extended .footer {
+		color: var(--primary);
+		font-weight: 600;
+		text-shadow: none;
 	}
-	.dropdown-extended .footer {
-		border-top-style: dotted;
-	}
+		.dropdown-extended .header {
+			border-bottom-style: dotted;
+		}
+		.dropdown-extended .footer {
+			border-top-style: dotted;
+		}
 
 .tabs .tab > a {
 	background: var(--secondary);
@@ -563,7 +578,7 @@ img.avatar, .postprofile .avatar img, .postbody img.postimage, .postbody video {
 		clear: both;
 	}
 
-.forums, .pagination li a, .pagination li span {
+ul.forums, ul.topics, .pagination li a, .pagination li span {
 	border-radius: 4px;
 }
 	.row:first-child {

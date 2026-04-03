@@ -12,7 +12,7 @@
 	--primary-hv: #455696;
 	--secondary: #c75317;
 	--secondary-hv: #de5c1a;
-	--shadow: var(--control-bg-light);
+	--shadow: rgba(20, 25, 33, .059);
 	--text: #b0b0b0;
 	--text-bright: #c7c7c7;
 	--text-dim: #606c96;
@@ -77,11 +77,6 @@ dl.details dt, label, dd label, fieldset.polls dl.voted,
 		.dropdown-extended a.mark_read {
 			background-color: var(--control-bg-bright);
 		}
-
-.dropdown-extended .header, .dropdown-extended .footer {
-	color: var(--primary);
-	text-shadow: none;
-}
 
 .username-coloured {
 	filter: invert(.1);
